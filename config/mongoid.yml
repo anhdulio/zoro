@@ -138,6 +138,6 @@ production:
     default:
       database: zoro_production
       hosts:
-        - 127.0.0.1:27017
+        - localhost:27017
       options:
         max_pool_size: 1
