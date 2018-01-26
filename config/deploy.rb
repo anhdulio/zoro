@@ -79,6 +79,13 @@ namespace :deploy do
   after  :finishing,    :restart
 end
 
+namespace :config do
+  desc "Symlink application config files."
+  task :symlink do
+    run "ln -s {#{shared_path},#{release_path}}/config/secrets.yml"  
+  end
+end
+
 # ps aux | grep puma    # Get puma pid
 # kill -s SIGUSR2 pid   # Restart puma
 # kill -s SIGTERM pid   # Stop puma
