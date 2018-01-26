@@ -66,6 +66,11 @@ namespace :deploy do
     end
   end
 
+  desc "Symlink application config files."
+  task :symlink do
+    run "ln -s {#{shared_path},#{release_path}}/config/secrets.yml"  
+  end
+
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
@@ -77,13 +82,6 @@ namespace :deploy do
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
-end
-
-namespace :config do
-  desc "Symlink application config files."
-  task :symlink do
-    run "ln -s {#{shared_path},#{release_path}}/config/secrets.yml"  
-  end
 end
 
 # ps aux | grep puma    # Get puma pid
