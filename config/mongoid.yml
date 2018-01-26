@@ -129,7 +129,7 @@ test:
     default:
       database: zoro_test
       hosts:
-        - localhost:27017
+        - 127.0.0.1:27017
       options:
         max_pool_size: 1
 
@@ -138,6 +138,6 @@ production:
     default:
       database: zoro_production
       hosts:
-        - localhost:27017
+        - 127.0.0.1:27017
       options:
         max_pool_size: 1
