@@ -136,13 +136,8 @@ test:
 production:
   clients:
     default:
-      database: zoro-dev
-      #database: zoro_production
-      #hosts:
-      #  - 127.0.0.1:27017
+      database: zoro_production
       hosts:
-        - ds129462.mlab.com:29462
+        - 127.0.0.1:27017
       options:
         max_pool_size: 1
-        user: 'zorovn'
-        password: 'anhdu12345'
