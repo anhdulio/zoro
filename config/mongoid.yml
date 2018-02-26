@@ -1,4 +1,4 @@
-development:
+production:
   # Configure available database clients. (required)
   clients:
     # Defines the default client. (required)
@@ -133,11 +133,11 @@ test:
       options:
         max_pool_size: 1
 
-production:
-  clients:
-    default:
-      database: zoro_production
-      hosts:
-        - 127.0.0.1:27017
-      options:
-        max_pool_size: 1
+# production:
+#   clients:
+#     default:
+#       database: zoro_production
+#       hosts:
+#         - 127.0.0.1:27017
+#       options:
+#         max_pool_size: 1
