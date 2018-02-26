@@ -9,7 +9,7 @@ development:
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       hosts:
-        - ds129462.mlab.com:29462
+        - 150.95.104.34:27017
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
@@ -22,10 +22,10 @@ development:
         #   mode: :secondary_preferred
 
         # The name of the user for authentication.
-        user: 'zorovn'
+        user: 'zoro'
 
         # The password of the user for authentication.
-        password: 'anhdu12345'
+        password: 'ZoroRiceApple'
 
         # The user's database roles.
         # roles:
@@ -136,8 +136,10 @@ test:
 production:
   clients:
     default:
-      database: zoro_production
+      database: zoro-production
       hosts:
-        - 127.0.0.1:27017
+        - 150.95.104.34:27017
       options:
+        user: 'zoro'
+        password: 'ZoroRiceApple'
         max_pool_size: 1
