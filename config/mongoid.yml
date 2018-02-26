@@ -1,4 +1,4 @@
-production:
+development:
   # Configure available database clients. (required)
   clients:
     # Defines the default client. (required)
@@ -141,3 +141,16 @@ test:
 #         - 127.0.0.1:27017
 #       options:
 #         max_pool_size: 1
+
+production:
+  # Configure available database clients. (required)
+  clients:
+    # Defines the default client. (required)
+    default:
+      database: zoro-production
+      hosts:
+        - ds249428.mlab.com:49428
+      options:
+        user: 'zorovn'
+        password: 'anhdu12345'
+  options:
