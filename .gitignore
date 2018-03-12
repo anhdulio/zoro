@@ -14,3 +14,7 @@
 
 #ignore wagon sites
 /sites
+
+#ignore mongoid, secret
+/config/secrets.yml
+/config/mongoid.yml
