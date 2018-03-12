@@ -16,5 +16,5 @@
 /sites
 
 #ignore mongoid, secret
-/config/secrets.yml
-/config/mongoid.yml
+config/secrets.yml
+config/mongoid.yml
