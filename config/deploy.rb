@@ -74,6 +74,7 @@ namespace :deploy do
   end
 
   before :starting,     :check_revision
+  before :starting, 'linked_files:upload_files'
   after  :finishing,    :compile_assets
   after  :finishing,    :cleanup
   after  :finishing,    :restart
