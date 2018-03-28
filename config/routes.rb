@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   mount Locomotive::Steam.to_app => '/_amp/', anchor: false
 
   get '/', to: redirect { |params, request|
-    "http://#{request.domain}/_amp"
+    "https://#{request.domain}/_amp"
   }, status: 301
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
