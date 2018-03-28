@@ -1,3 +1,5 @@
+include Rails.application.routes.url_helpers
+
 Rails.application.routes.draw do
   
   # Locomotive Back-office
@@ -9,7 +11,9 @@ Rails.application.routes.draw do
   # Render site
   mount Locomotive::Steam.to_app => '/_amp/', anchor: false
 
-  get '/', to: redirect('/_amp/')
+  get '/', to: redirect { |params, request|
+    "http://#{request.domain}/_amp"
+  }, status: 301
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
