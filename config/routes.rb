@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   mount Locomotive::API.to_app => '/locomotive(/:site_handle)/api'
 
   # Render site
-  mount Locomotive::Steam.to_app => '/', anchor: false
+  mount Locomotive::Steam.to_app => '/_amp/', anchor: false
 
+  get '/', to: redirect { |params, request|
+    "https://#{request.domain}/_amp/"
+  }
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
